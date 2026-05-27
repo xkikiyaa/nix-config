@@ -15,6 +15,10 @@ in
   home.file.".config/neofetch".source =
     dotfiles + "/neofetch";
 
+  home.file.".scripts/seija" = {
+    source = dotfiles + "/seija/seija";
+    executable = true;};
+
   home.file.".config/kitty".source =
     dotfiles + "/kitty";
 
