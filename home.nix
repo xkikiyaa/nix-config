@@ -22,6 +22,12 @@ in
   home.file.".config/kitty".source =
     dotfiles + "/kitty";
 
+  home.file = {
+    ".config/ly/nl.ini".source =
+    /etc/nixos/.dotfiles/ly/nl.ini;
+};
+
+
   programs.bash = {
   enable = true;
 
