@@ -38,19 +38,11 @@ in
   };
 
   initExtra = ''
-    export PATH="$HOME/.scripts:$PATH"
-
-    neofetch() {
-      $HOME/.config/neofetch/neofetch "$@"
-    }
-
-    if [[ $- == *i* ]]; then
-      $HOME/.config/neofetch/neofetch \
-        --backend kitty \
-        --source $HOME/.config/neofetch/png/lain.png
-    fi
-
     PS1="\[\e[38;2;194;246;255m\][\u@\h:\w]\\$\[\e[0m\] "
+
+    if command -v hyfetch >/dev/null; then
+      hyfetch
+    fi
   '';
 };
 }

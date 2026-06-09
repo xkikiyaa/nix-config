@@ -34,5 +34,6 @@
     kdePackages.kate
     irssi
     mangohud
+    hyfetch
   ];
 }
