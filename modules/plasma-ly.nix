@@ -10,7 +10,7 @@ let
   };
 
   sddm-xsetup = pkgs.writeShellScript "sddm-xsetup" ''
-    ${pkgs.xorg.xrandr}/bin/xrandr --output DP-3 --off || true
+    ${pkgs.xrandr}/bin/xrandr --output DP-3 --off || true
   '';
 in
 {
@@ -33,14 +33,14 @@ in
     extraPackages = with pkgs; [
       sddm-astronaut
       kdePackages.qtmultimedia
-      xorg.xrandr
+      xrandr
     ];
   };
 
   environment.systemPackages = with pkgs; [
     sddm-astronaut
     kdePackages.qtmultimedia
-    xorg.xrandr
+    xrandr
   ];
 
   services.desktopManager.plasma6.enable = true;
