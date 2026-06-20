@@ -31,9 +31,9 @@
     osu-lazer-bin
     kdePackages.ark
     unrar
-    kdePackages.kate
     irssi
     mangohud
     hyfetch
+    vscodium
   ];
 }

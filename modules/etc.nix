@@ -7,7 +7,7 @@
   networking.hostName = "nixos";
 
   fileSystems."/mnt/1TB" = {
-  device = "UUID=97669173-4bbc-4eaa-be13-8e17f2357c35";
+  device = "UUID=109cddd7-cfdc-46c4-beff-698b7a1078c6";
   fsType = "xfs";
   options = [ "defaults" ];
   };

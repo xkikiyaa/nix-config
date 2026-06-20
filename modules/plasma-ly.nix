@@ -1,19 +1,32 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
+let
+  sddm-astronaut = pkgs.sddm-astronaut.override {
+    embeddedTheme = "hyprland_kath";
+
+    themeConfig = {
+      HeaderTextColor = "#d5c4a1";
+    };
+  };
+in
 {
   services.xserver.enable = true;
 
-  services.displayManager.ly = {
+  services.displayManager.sddm = {
     enable = true;
-    settings = {
-      clear_password = true;
-      lang = "nl";
-      numlock = true;
 
-    };
+    theme = "sddm-astronaut-theme";
+
+    extraPackages = with pkgs; [
+      sddm-astronaut
+      kdePackages.qtmultimedia
+    ];
   };
 
-  environment.etc."ly/lang/nl.ini".source = ./../.dotfiles/ly/nl.ini;
+  environment.systemPackages = with pkgs; [
+    sddm-astronaut
+    kdePackages.qtmultimedia
+  ];
 
   services.desktopManager.plasma6.enable = true;
 
