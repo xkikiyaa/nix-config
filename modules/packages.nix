@@ -1,7 +1,11 @@
-{ config, pkgs, ...
-}:
+{ config, pkgs, ... }:
 
 {
+  nixpkgs.config.permittedInsecurePackages = [
+    "librewolf-151.0.2-1"
+    "librewolf-unwrapped-151.0.2-1"
+  ];
+
   environment.systemPackages = with pkgs; [
     vim
     git
@@ -17,15 +21,15 @@
     lunar-client
     vlc
     r2modman
-    wineWowPackages.full
+    wineWow64Packages.full
     dxvk
     protonplus
     cider-2
     openssh
     xfsprogs
     fastfetch
-    pciutils # neofetch gpu
-    mesa-demos # neofetch gpu
+    pciutils
+    mesa-demos
     opentabletdriver
     xclicker
     osu-lazer-bin
