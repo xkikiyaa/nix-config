@@ -37,6 +37,7 @@ in
     discover
     okular
     qrca
+    kate
   ];
 
   environment.etc."xdg/kcminputrc".text = ''
