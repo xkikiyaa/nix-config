@@ -8,24 +8,39 @@ let
       HeaderTextColor = "#d5c4a1";
     };
   };
+
+  sddm-xsetup = pkgs.writeShellScript "sddm-xsetup" ''
+    ${pkgs.xorg.xrandr}/bin/xrandr --output DP-3 --off || true
+  '';
 in
 {
   services.xserver.enable = true;
 
   services.displayManager.sddm = {
     enable = true;
-
     theme = "sddm-astronaut-theme";
+    autoNumlock = true;
+    settings = {
+      General = {
+        DisplayServer = "x11";
+      };
+
+      X11 = {
+        DisplayCommand = "${sddm-xsetup}";
+      };
+    };
 
     extraPackages = with pkgs; [
       sddm-astronaut
       kdePackages.qtmultimedia
+      xorg.xrandr
     ];
   };
 
   environment.systemPackages = with pkgs; [
     sddm-astronaut
     kdePackages.qtmultimedia
+    xorg.xrandr
   ];
 
   services.desktopManager.plasma6.enable = true;
