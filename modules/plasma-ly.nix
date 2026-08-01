@@ -24,6 +24,5 @@
     discover
     okular
     qrca
-    kate
   ];
 }

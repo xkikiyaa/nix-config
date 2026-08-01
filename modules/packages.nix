@@ -21,15 +21,14 @@
     lunar-client
     vlc
     r2modman
-#    wineWow64Packages.full
-#    dxvk
+    wineWow64Packages.full
+    dxvk
     protonplus
     cider-2
     openssh
     xfsprogs
-    fastfetch
-    pciutils
-    mesa-demos
+    pciutils #gpu
+    mesa-demos #gpu
     opentabletdriver
     xclicker
     osu-lazer-bin
@@ -37,7 +36,7 @@
     unrar
     irssi
     mangohud
-#    hyfetch
-    vscodium
+    hyfetch
+    openrgb-with-all-plugins
   ];
 }
