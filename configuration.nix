@@ -15,7 +15,7 @@
       ./modules/locale.nix
       ./modules/network.nix
       ./modules/packages.nix
-      ./modules/plasma-ly.nix
+      ./modules/plasma.nix
       ./modules/user.nix
 
       <home-manager/nixos>

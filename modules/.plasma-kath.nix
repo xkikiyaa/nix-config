@@ -1,18 +1,18 @@
 { pkgs, ... }:
 
-#let
-#  sddm-astronaut = pkgs.sddm-astronaut.override {
-#    embeddedTheme = "hyprland_kath";
-#
-#    themeConfig = {
-#      HeaderTextColor = "#d5c4a1";
-#    };
-#  };
-#
-#  sddm-xsetup = pkgs.writeShellScript "sddm-xsetup" ''
-#    ${pkgs.xrandr}/bin/xrandr --output DP-3 --off || true
-#  '';
-#in
+let
+  sddm-astronaut = pkgs.sddm-astronaut.override {
+    embeddedTheme = "hyprland_kath";
+
+    themeConfig = {
+      HeaderTextColor = "#d5c4a1";
+    };
+  };
+
+  sddm-xsetup = pkgs.writeShellScript "sddm-xsetup" ''
+    ${pkgs.xrandr}/bin/xrandr --output DP-3 --off || true
+  '';
+in
 {
   services.xserver.enable = true;
 
