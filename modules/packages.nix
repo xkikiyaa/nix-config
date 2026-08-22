@@ -29,7 +29,7 @@
     xfsprogs
     pciutils #gpu
     mesa-demos #gpu
-    opentabletdriver
+#    opentabletdriver
     xclicker
     osu-lazer-bin
     kdePackages.ark
@@ -37,6 +37,7 @@
     irssi
     mangohud
     hyfetch
-    openrgb-with-all-plugins
+#    openrgb-with-all-plugins
+    protonup-qt
   ];
 }
